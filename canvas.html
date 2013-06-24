@@ -6,6 +6,14 @@
             function canvasLoader(){
             var weetCanvas = document.getElementById('canvas');
             var weetcanvas1 = weetCanvas.getContext('2d');
+            weetcanvas1.fillStyle = "rgba(255, 0, 0, 1)";
+            weetcanvas1.fillRect(0, 0, 220, 220);
+            weetcanvas1.fillStyle = "rgba(0, 0, 255, 1)";
+            weetcanvas1.fillRect(0, 260, 220, 220);
+            weetcanvas1.fillStyle = "rgba(0, 255, 0, 1)";
+            weetcanvas1.fillRect(260, 0, 220, 220);
+            weetcanvas1.fillStyle = "rgba(255, 255, 0, 1)";
+            weetcanvas1.fillRect(260, 260, 220, 220);
             }
         </script>
     </head>
@@ -14,7 +22,7 @@
     <center>
     <h1>CANVAS</h1>
     <p>
-    <canvas height="640" width="480">
+    <canvas height="480" width="480">
     </canvas>
     </center>
     </font>
