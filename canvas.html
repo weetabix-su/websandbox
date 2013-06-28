@@ -2,30 +2,48 @@
 <html>
     <head>
         <title>[weetabix] Canvas</title>
-        <script type="text/javascript">
-            function canvasLoader(){
-            var weetCanvas = document.getElementById('weetcan');
-            var weetcanvas1 = weetCanvas.getContext('2d');
-            weetcanvas1.fillStyle = "rgba(255, 0, 0, 1)";
-            weetcanvas1.fillRect(0, 0, 220, 220);
-            weetcanvas1.fillStyle = "rgba(0, 0, 255, 1)";
-            weetcanvas1.fillRect(0, 260, 220, 220);
-            weetcanvas1.fillStyle = "rgba(0, 255, 0, 1)";
-            weetcanvas1.fillRect(260, 0, 220, 220);
-            weetcanvas1.fillStyle = "rgba(255, 255, 0, 1)";
-            weetcanvas1.fillRect(260, 260, 220, 220);
-            }
-        </script>
-    </head>
-    <body onload="canvasLoader()" bgcolor="#000000">
-    <font color="#ffffff">
-    <center>
-    <h1>CANVAS</h1>
-    <p>
-    <canvas id="weetcan" height="480" width="480">
-    </canvas>
-    <h4><a href="index.html">Back to index</a></h4>
-    </center>
-    </font>
-    </body>
+		<script type="text/javascript">
+			function canvasLoader(){
+			var weetCanvas = document.getElementById('weetcan');
+			var weetcanvas1 = weetCanvas.getContext('2d');
+			//1. Filled rectangle sample
+			weetcanvas1.fillStyle = "rgba(255, 0, 0, 1)";
+			weetcanvas1.fillRect(0, 0, 220, 220);
+			weetcanvas1.fillStyle = "rgba(0, 0, 255, 1)";
+			weetcanvas1.fillRect(0, 260, 220, 220);
+			weetcanvas1.fillStyle = "rgba(0, 255, 0, 1)";
+			weetcanvas1.fillRect(260, 0, 220, 220);
+			weetcanvas1.fillStyle = "rgba(255, 255, 0, 1)";
+			weetcanvas1.fillRect(260, 260, 220, 220);
+			//2. Line art sample
+			weetcanvas1.beginPath();
+			weetcanvas1.strokeStyle = "rgba(255, 255, 255, 1)";
+			weetcanvas1.moveTo(240, 60);
+			weetcanvas1.lineTo(420, 240);
+			weetcanvas1.lineTo(240, 420);
+			weetcanvas1.lineTo(60, 240);
+			weetcanvas1.closePath();
+			weetcanvas1.stroke();
+			//3. Filled line art sample
+			weetcanvas1.fillStyle = "rgba(192, 192, 192, 1)";
+			weetcanvas1.beginPath();			
+			weetcanvas1.moveTo(240, 80);
+			weetcanvas1.lineTo(400, 400);
+			weetcanvas1.lineTo(80, 400);
+			weetcanvas1.closePath();
+			weetcanvas1.fill();
+			}
+		</script>
+	</head>
+	<body onload="canvasLoader()" bgcolor="#000000">
+	<font color="#ffffff">
+	<center>
+	<h1>CANVAS</h1>
+	<p>
+	<canvas id="weetcan" height="480" width="480">
+	</canvas>
+	<h4><a href="index.html">Back to index</a></h4>
+	</center>
+	</font>
+	</body>
 </html>
